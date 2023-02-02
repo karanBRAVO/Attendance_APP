@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    background-color: #BFDB38;
+    border-bottom: 2px solid #00425A;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navbar .leftContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+
+.navbar .leftContainer img {
+    width: 70px;
+    padding: 1px;
+    height: auto;
+}
+
+.navbar .leftContainer .box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 1px;
+    margin: 1px;
+    border-radius: 5px;
+}
+
+.navbar .leftContainer .box .boxCont {
+    padding: 3px;
+    margin: 1px;
+}
+
+.navbar .leftContainer .box .boxCont span {
+    color: #00425A;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.navbar ul {
+    padding: 3px;
+    margin: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul li {
+    cursor: pointer;
+    color: #BFDB38;
+    background-color: #00425A;
+    border: 2px solid #00425A;
+    border-radius: 4px;
+    padding: 4px 5px;
+    margin: 0 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.attendanceTableContainer {
+    margin-top: 13%;
+    padding: 5px;
+    overflow-y: auto;
+    display: none;
+    transition: all 0.3s;
+    animation: chgOpacity 0.3s linear;
+}
+
+@keyframes chgOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.attendanceTableContainer table {
+    padding: 1px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.attendanceTableContainer table tr th {
+    padding: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 0.9em;
+    border: 2px solid #00425A;
+    border-radius: 2px;
+    background-color: #00425A;
+    color: yellowgreen;
+}
+
+.attendanceTableContainer table tr td {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 2px;
+    text-transform: capitalize;
+}
+
+.present {
+    background-color: rgba(172, 255, 47, 0.859);
+}
+
+.absent {
+    background-color: rgba(220, 20, 60, 0.855);
+}

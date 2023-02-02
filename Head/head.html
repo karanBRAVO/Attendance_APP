@@ -15,19 +15,25 @@
         <div class="startSessionCont">
             <div class="innerCont">
                 <div class="topHead">
-                    <img src="../Assets/login-user.svg" alt="">
+                    <img src="../Assets/login-user.svg" alt="" draggable="false">
                     <h1>Login</h1>
                 </div>
-                <div class="midLayer">
-                    <input type="text" class="input" id="userName" placeholder="UserName">
-                    <input type="datetime-local" class="input" id="dateTime">
-                    <div class="passwordCont">
-                        <input type="password" class="input" id="userId" placeholder="Password/Id">
-                        <input type="checkbox" class="input" id="ShowPassword">
+                <form action="#" method="get">
+                    <div class="midLayer">
+                        <input type="text" class="input" id="userName" placeholder="UserName" autocomplete="off">
+                        <input type="datetime-local" class="input" id="dateTime" autocomplete="off">
+                        <div class="passwordCont">
+                            <input type="password" class="input" id="userId" placeholder="Password/Id"
+                                autocomplete="off">
+                            <input type="checkbox" class="input" id="ShowPassword">
+                            <div class="tootipCont">
+                                <span>show password</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </form>
                 <div class="button">
-                    <button>
+                    <button id="startSessionBtn">
                         <span>Start Session</span>
                     </button>
                 </div>

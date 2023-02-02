@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get code</title>
+    <link rel="stylesheet" href="./head.css">
+    <link rel="stylesheet" href="./head2.css">
+    <script defer src="./head2.js"></script>
+</head>
+
+<body>
+    <div class="alertBox" id="alertBox">
+        <div class="innerBox" id="alertBoxBg">
+            <span id="alertSpan"></span>
+        </div>
+    </div>
+    <div class="mainContainer" id="mainContainer2">
+        <div class="startSessionCont" id="innerContainer2">
+            <div class="innerCont">
+                <div class="topHead">
+                    <img src="../Assets/login-user.svg" alt="" draggable="false">
+                    <h1 id="h1Tag2">Get Code</h1>
+                </div>
+                <form action="#" method="get">
+                    <div class="midLayer">
+                        <input type="number" class="input" id="numberOfStudents" placeholder="Number of Students"
+                            autocomplete="off" min="1">
+                    </div>
+                </form>
+                <div class="button">
+                    <button id="getCodeBtn">
+                        <span id="btnSpan2">Get Code</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="showCodeContainer" id="showCodeCont">
+            <div>
+                <span id="showCodeSpan">code ~ 9876543210</span>
+                <img src="../Assets/copyText.svg" alt="copyCode" draggable="false" id="copyToClipboardBtn">
+                <span id="toolTip">Copy to clipboard</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

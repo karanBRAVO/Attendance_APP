@@ -22,6 +22,7 @@ body {
     background-color: #CF4DCE;
     padding: 20px 30px;
     border-radius: 5px;
+    box-shadow: 0 0 9px #CF4DCE;
 }
 
 .mainContainer .startSessionCont .innerCont {
@@ -82,6 +83,43 @@ body {
 .mainContainer .startSessionCont .innerCont .midLayer .passwordCont input[type="checkbox"] {
     position: relative;
     left: 8px;
+}
+
+.mainContainer .startSessionCont .innerCont .midLayer .passwordCont .tootipCont::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-top: 5.5px solid rgb(0, 0, 0);
+    border-left: 5.5px solid rgb(0, 0, 0);
+    border-top-left-radius: 3px;
+    transform: rotateZ(-45deg);
+}
+
+.mainContainer .startSessionCont .innerCont .midLayer .passwordCont .tootipCont {
+    background-color: rgb(0, 0, 0);
+    padding: 5px 4px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 4px;
+    border: 2px solid rgb(0, 0, 0);
+    position: absolute;
+    margin-left: 334px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer .startSessionCont .innerCont .midLayer .passwordCont .tootipCont span {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.9em;
+    letter-spacing: 0.9px;
+    word-spacing: 1px;
 }
 
 .mainContainer .startSessionCont .innerCont .midLayer input::placeholder {
