@@ -4,7 +4,8 @@
   "description": "This is attendance app.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app/app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/karanBRAVO/Attendance_APP/issues"
   },
-  "homepage": "https://github.com/karanBRAVO/Attendance_APP#readme"
+  "homepage": "https://github.com/karanBRAVO/Attendance_APP#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.9.1"
+  }
 }
