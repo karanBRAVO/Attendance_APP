@@ -1,11 +1,20 @@
-const MONGOOSE = require('mongoose')
+console.log("------------------------------------------------------------");
 
-const URL = `mongodb://localhost:27017/Attendance_App`
+console.log("Connecting to database...");
 
-MONGOOSE.set('strictQuery', true)
+const MONGOOSE = require("mongoose");
 
-MONGOOSE.connect(URL).then(() => {
-    console.log(`[CONNECTED] database created`)
-}).catch((err) => {
-    console.log(err)
-})
+const URL = "mongodb://0.0.0.0:27017/attendanceApp";
+
+MONGOOSE.set('strictQuery', false);
+
+MONGOOSE.connect(URL)
+  .then(() => {
+    console.log(`[+] connected to database.`);
+  })
+  .catch((err) => {
+    if (err) {
+      console.log(`[-] Error occured while connecting to database`);
+      console.log(err);
+    }
+  });

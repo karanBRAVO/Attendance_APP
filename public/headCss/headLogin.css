@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
+    background-color: #212A3E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.innerContainer {
+    background-color: #9BA4B5;
+    padding: 20px 30px;
+    border: 2px solid #394867;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #F1F6F9;
+    display: flex;
+    flex-direction: column;
+}
+
+.imageContainer {
+    padding: 3px;
+    margin: 3px;
+}
+
+.imageContainer .img {
+    padding: 3px;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer .img img {
+    width: 200px;
+    height: auto;
+    padding: 1px;
+    margin: 1px;
+}
+
+.headingContainer {
+    padding: 5px;
+    margin: 3px;
+}
+
+.headingContainer .heading {
+    text-align: left;
+    padding: 2px;
+    margin: 1px;
+}
+
+.heading h1 {
+    padding: 1px;
+    margin: 1px;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+    letter-spacing: 1px;
+    color: #212A3E;
+    text-transform: capitalize;
+}
+
+hr {
+    padding: 1px;
+    background-color: #212a3e5a;
+    outline: none;
+    margin: 3px;
+}
+
+.inputContainer {
+    padding: 5px;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.inputContainer .box,
+.diffBox {
+    padding: 3px;
+    margin: 2px;
+}
+
+.box input,
+.diffBox input {
+    background-color: transparent;
+    border: 2px solid #394867;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+.box input::placeholder,
+.diffBox input::placeholder {
+    color: #000;
+}
+
+.diffBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.diffBox .outBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.diffBox .outBox input {
+    margin: 5px;
+}
+
+.diffBox .outBox label {
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 1px;
+    margin: 5px;
+}
+
+.buttonContainer {
+    padding: 4px;
+    margin: 4px;
+}
+
+.buttonContainer button {
+    background: #212A3E;
+    color: #9BA4B5;
+    border: 2px solid #212A3E;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
