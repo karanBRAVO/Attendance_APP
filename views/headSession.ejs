@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Head-Session</title>
+  <link rel="stylesheet" href="./headCss/headSession.css" />
+</head>
+
+<body>
+  <div class="codeContainer">
+    <div class="codeBox">
+      <span>CoDe</span>
+    </div>
+    <div id="copyCodeBtn">
+      <img src="./Assets/copyText.svg" alt="copy">
+    </div>
+  </div>
+  <div class="container">
+    <div class="innerContainer">
+      <div class="imgContainer">
+        <img src="./Assets/head.svg" alt="head" />
+        <span>{{head_user_name}}</span>
+      </div>
+      <div class="headingContainer">
+        <h1>Start Session</h1>
+      </div>
+      <div class="formContainer">
+        <form action="/head-get-code" method="get">
+          <div class="inputContainer">
+            <input type="number" name="stdCount" id="stdCount" placeholder="Number of students" required />
+          </div>
+          <div class="btnContainer">
+            <input type="submit" value="Get Code" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

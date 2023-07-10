@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#222, #2f2, #222);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerContainer {
+    background: #222;
+    padding: 30px;
+    border: 2px solid #222;
+    box-shadow: 0 0 8px #222;
+}
+
+.innerContainer .headingContainer {
+    padding: 5px;
+    margin: 2px;
+}
+
+.headingContainer h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    font-weight: 900;
+    text-decoration: underline;
+    color: #2f2;
+    text-transform: capitalize;
+}
+
+.formContainer {
+    padding: 3px;
+    margin: 0 2px;
+}
+
+.formContainer form {
+    padding: 1px;
+}
+
+.inputContainer {
+    padding: 5px 0;
+    margin: 1px 0;
+}
+
+.inputContainer input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 3px 0;
+    padding: 5px;
+    border: 2px solid #2f2;
+    background-color: transparent;
+    outline: none;
+    color: white;
+}
+
+.inputContainer button {
+    padding: 5px 8px;
+    margin: 3px;
+    background-color: #222;
+    color: #2f2;
+    border: 2px solid #2f2;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.3em;
+    font-family: sans-serif;
+}

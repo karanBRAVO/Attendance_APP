@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./Assets/headLogin.ico" type="image/x-icon">
+  <title>ATTENDANCE - Head Login</title>
+  <link rel="stylesheet" href="./headCss/headLogin.css" />
+  <script defer src="./headJs/headLogin.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="innerContainer">
+      <div class="imageContainer">
+        <div class="img">
+          <img src="./Assets/login-user.svg" alt="UserLogin" draggable="false" />
+        </div>
+      </div>
+      <div class="headingContainer">
+        <div class="heading">
+          <h1>Login</h1>
+        </div>
+      </div>
+      <hr />
+      <form action="/head-login" method="get" class="inputContainer" id="head_login_form">
+        <div class="box">
+          <input type="text" name="userName" id="userName" autocomplete="off" placeholder="user name" required />
+        </div>
+        <div class="box">
+          <input type="date" name="dateTime" id="dateTime" required />
+        </div>
+        <div class="box">
+          <div class="inBox">
+            <input type="password" name="userId" id="userId" placeholder="user id" required />
+          </div>
+          <div class="outBox">
+            <input type="checkbox" name="showPassword" autocomplete="off" id="showPasswordBtn" />
+            <label for="showPasswordBtn">show password</label>
+          </div>
+        </div>
+        <div class="buttonContainer">
+          <div class="button">
+            <button id="submitBtn">submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

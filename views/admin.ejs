@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./Assets/admin.ico" type="image/x-icon">
+  <title>Admin-Dashboard</title>
+  <link rel="stylesheet" href="./adminCss/admin.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="innerContainer">
+      <div class="headingContainer">
+        <h1>Add User</h1>
+      </div>
+      <div class="formContainer">
+        <form action="/add-new-user/to-database" method="post">
+          <div class="inputContainer">
+            <input type="text" name="addUsername" id="addUsername" placeholder="Username" autocomplete="off" />
+          </div>
+          <div class="inputContainer">
+            <input type="datetime" name="addUserDob" id="addUserDob" placeholder="Date of Birth" autocomplete="off" />
+          </div>
+          <div class="inputContainer">
+            <input type="password" name="addUserPassword" id="" placeholder="Password" autocomplete="off">
+            <input type="password" id="confirmPassword" placeholder="Confirm password" autocomplete="off">
+          </div>
+          <div class="inputContainer">
+            <button id="addUserButton">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -6,7 +6,7 @@ const MONGOOSE = require("mongoose");
 
 const URL = "mongodb://0.0.0.0:27017/attendanceApp";
 
-MONGOOSE.set('strictQuery', false);
+MONGOOSE.set("strictQuery", false);
 
 MONGOOSE.connect(URL)
   .then(() => {
