@@ -13,8 +13,12 @@ const SCHEMA = MONGOOSE.Schema({
     type: String,
     required: true,
   },
+  t_id: {
+    type: String,
+    required: true,
+  },
 });
 
-const ADMIN_MODEL = MONGOOSE.model("headuser", SCHEMA);
+const ADMIN_ADD_USER_MODEL = MONGOOSE.model("headuser", SCHEMA);
 
-module.exports = ADMIN_MODEL;
+module.exports = ADMIN_ADD_USER_MODEL;

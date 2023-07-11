@@ -168,3 +168,8 @@
     text-transform: capitalize;
     text-shadow: 0 0 7px #000;
 }
+
+.btnContainer input:hover {
+    background-color: #fff;
+    color: #000;
+}

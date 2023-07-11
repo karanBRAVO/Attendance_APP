@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="./Assets/headLogin.ico" type="image/x-icon">
   <title>ATTENDANCE - Head Login</title>
-  <link rel="stylesheet" href="./headCss/headLogin.css" />
-  <script defer src="./headJs/headLogin.js"></script>
+  <link rel="stylesheet" href="./head/headCss/headLogin.css" />
+  <script defer src="./head/headJs/headLogin.js"></script>
 </head>
 
 <body>
@@ -34,12 +34,15 @@
         </div>
         <div class="box">
           <div class="inBox">
-            <input type="password" name="userId" id="userId" placeholder="user id" required />
+            <input type="password" name="userPass" id="userPass" placeholder="password" required />
           </div>
           <div class="outBox">
             <input type="checkbox" name="showPassword" autocomplete="off" id="showPasswordBtn" />
             <label for="showPasswordBtn">show password</label>
           </div>
+        </div>
+        <div class="box">
+          <input type="text" name="userT_id" id="userT_id" placeholder="Id" autocomplete="off" required>
         </div>
         <div class="buttonContainer">
           <div class="button">

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/stdApp.ico" type="image/x-icon">
+    <title>Student App</title>
+    <link rel="stylesheet" href="./students/stdCss/stdApp.css">
+    <script defer src="./students/stdJs/stdApp.js"></script>
+</head>
+
+<body>
+    <div class="headingCont">
+        <h1>Student App</h1>
+        <h5>Mark your attendance</h5>
+    </div>
+    <div class="formCont">
+        <form action="/student-app-mark-attendance" method="get" id="markAtt_form">
+            <div class="inputCont">
+                <label for="stdName">Name:</label>
+                <input type="text" name="stdName" id="stdName" placeholder="Name" autocomplete="off" required>
+            </div>
+            <div class="inputCont">
+                <label for="stdRoll">Roll Num:</label>
+                <input type="text" name="stdRoll" id="stdRoll" placeholder="Roll Number" autocomplete="off" required>
+            </div>
+            <div class="inputCont">
+                <label for="stdSub">Subject:</label>
+                <input type="text" name="stdSub" id="stdSub" placeholder="Subject" autocomplete="off" required>
+            </div>
+            <div class="inputCont">
+                <label for="teacher_name">Teacher's Name:</label>
+                <input type="text" name="teacher_name" id="teacher_name" placeholder="Teacher's name" autocomplete="off"
+                    required>
+            </div>
+            <div class="inputCont">
+                <label for="teacher_id">Teacher id:</label>
+                <input type="text" name="teacher_id" id="teacher_id" placeholder="teacher's id" autocomplete="off"
+                    required>
+            </div>
+            <div class="inputCont">
+                <label for="stdMail">Mail:</label>
+                <input type="email" name="stdMail" id="stdMail" placeholder="email" autocomplete="off" required>
+            </div>
+            <div class="inputCont">
+                <label for="stdClass">Class:</label>
+                <select name="stdClass" id="stdClass">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="inputCont">
+                <label for="Code">Code:</label>
+                <input type="text" name="code" id="code" placeholder="code" autocomplete="off" required>
+            </div>
+            <div class="inputCont">
+                <button id="mark_presentBtn">Mark my Present</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

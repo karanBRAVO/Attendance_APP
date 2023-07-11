@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="./Assets/admin.ico" type="image/x-icon">
   <title>Admin-Dashboard</title>
-  <link rel="stylesheet" href="./adminCss/admin.css" />
+  <link rel="stylesheet" href="./admin/adminCss/admin.css" />
+  <script defer src="./admin/adminJs/admin.js"></script>
 </head>
 
 <body>
@@ -17,16 +18,20 @@
         <h1>Add User</h1>
       </div>
       <div class="formContainer">
-        <form action="/add-new-user/to-database" method="post">
+        <form action="/admin-dashboard" method="get" id="addUserForm">
           <div class="inputContainer">
             <input type="text" name="addUsername" id="addUsername" placeholder="Username" autocomplete="off" />
           </div>
           <div class="inputContainer">
-            <input type="datetime" name="addUserDob" id="addUserDob" placeholder="Date of Birth" autocomplete="off" />
+            <input type="date" name="addUserDob" id="addUserDob" placeholder="Date of Birth" autocomplete="off" />
           </div>
           <div class="inputContainer">
-            <input type="password" name="addUserPassword" id="" placeholder="Password" autocomplete="off">
+            <input type="password" name="addUserPassword" id="addUserPassword" placeholder="Password"
+              autocomplete="off">
             <input type="password" id="confirmPassword" placeholder="Confirm password" autocomplete="off">
+          </div>
+          <div class="inputContainer">
+            <input type="text" name="addUserID" id="addUserId" placeholder="Id" autocomplete="off" required>
           </div>
           <div class="inputContainer">
             <button id="addUserButton">Add</button>

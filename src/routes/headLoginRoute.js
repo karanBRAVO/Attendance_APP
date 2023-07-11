@@ -1,30 +1,35 @@
 const EXPRESS = require("express");
 const ROUTER = EXPRESS.Router();
+const ADMIN_ADD_USER_MODEL = require("../schema_model/admin_addUser");
 
 ROUTER.get("/head-login", (req, res) => {
   res.render("headLogin");
   console.log(`[*] rendering head login page`);
 });
 
-let data_obj = {
-  name: "karan",
-  date_time: "2004-03-29",
-  password: "12345678",
-};
-
 ROUTER.post("/head-login/handle-post/login", (req, res) => {
-  let user_name = req.body.userName;
-  let date_time = req.body.dateTime;
-  let user_id = req.body.userId;
-  
-  if (user_name == data_obj.name && date_time == data_obj.date_time && user_id == data_obj.password) {
-    res.render("headSession");
-    console.log(`[+] head logged in`);
-  }
-  else {
-    console.log(`[-] head entered invalid credentials`);
-    res.redirect("/head-login");
-  }
+  let post_obj = {
+    name: req.body.userName,
+    dob: req.body.dateTime,
+    password: req.body.userPass,
+    t_id: req.body.userT_id,
+  };
+
+  ADMIN_ADD_USER_MODEL.findOne(post_obj)
+    .then((data) => {
+      if (data != null) {
+        req.session.head_login_data = { name: post_obj.name, t_id: post_obj.t_id };
+        res.redirect("/head-start-session");
+        console.log(`[+] head logged in`);
+      } else {
+        console.log(`[-] head entered invalid credentials`);
+        res.send(`No account found | <a href="/head-login">Login</a>`);
+      }
+    })
+    .catch((err) => {
+      console.log(`[!] Error`);
+      console.log(err);
+    });
 });
 
 module.exports = ROUTER;

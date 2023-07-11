@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - Check Attendance</title>
+</head>
+
+<body>
+    <div class="topContainer">
+        <div class="headingContainer">
+            <h1>Attendance App</h1>
+        </div>
+        <div class="formContainer">
+            <form action="/check-attendance/get-attendance" method="post">
+                <div class="inputCont">
+                    <input type="text" name="name" id="name" placeholder="name" autocomplete="off">
+                </div>
+                <div class="inputCont">
+                    <input type="text" name="roll" id="roll" placeholder="roll Num" autocomplete="off">
+                </div>
+                <div class="inputCont">
+                    <input type="text" name="teacher_name" id="teacher_name" placeholder="teacher's name"
+                        autocomplete="off">
+                </div>
+                <div class="inputCont">
+                    <input type="text" name="teacher_id" id="teacher_id" placeholder="teacher_id" autocomplete="off">
+                </div>
+                <div class="inputCont">
+                    <input type="text" name="class" id="class" placeholder="class" autocomplete="off">
+                </div>
+                <div class="inputCont">
+                    <input type="text" name="subject" id="subject" placeholder="subject" autocomplete="off">
+                </div>
+                <div class="inputCont">
+                    <input type="submit" value="Get">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
