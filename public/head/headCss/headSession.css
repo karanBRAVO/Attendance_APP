@@ -136,13 +136,18 @@
 .formContainer form .inputContainer {
     padding: 5px;
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
-.formContainer form .inputContainer #stdCount {
+.formContainer form .inputContainer .inputs {
     border: 2px solid #18122B;
     background-color: #18122B;
     outline: none;
     padding: 10px;
+    margin: 3px;
     border-radius: 1.5px;
     color: white;
     font-family: 'Roboto Mono', monospace;

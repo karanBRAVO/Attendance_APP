@@ -30,19 +30,28 @@
             <img src="./Assets/head.svg" alt="head" />
             <span>Welcome <%=data.name%> [ Id: <%=data.t_id%> ]</span>
           </div>
-          <div class="headingContainer">
-            <h1>Start Session</h1>
-          </div>
-          <div class="formContainer">
-            <form action="/head-start-session" method="get" id="getCodeForm">
-              <div class="inputContainer">
-                <input type="number" name="stdCount" id="stdCount" placeholder="Number of students" required />
+          <% if (data.stdCount) {%>
+            <p style="color: gainsboro; font-family: Arial, Helvetica, sans-serif; font-size: 1.1em; font-weight: 400;">
+              Do not close this window w/o stopping session</p>
+            <a style="color: aliceblue; text-decoration: underline; cursor: pointer; font-family: 'Times New Roman', Times, serif; font-size: 1.3em; font-weight: 600; text-transform: none;"
+              href="/head-session/stop-session">Stop Session</a>
+            <% } else {%>
+              <div class="headingContainer">
+                <h1>Start Session</h1>
               </div>
-              <div class="btnContainer">
-                <input type="submit" value="Get Code" id="getCodeBtn" />
+              <div class="formContainer">
+                <form action="/head-start-session" method="get" id="getCodeForm">
+                  <div class="inputContainer">
+                    <input type="number" name="stdCount" id="stdCount" class="inputs" autocomplete="off" placeholder="Number of students"
+                      required />
+                    <input type="text" name="stdSub" id="stdSub" class="inputs" placeholder="Subject" autocomplete="off" required />
+                  </div>
+                  <div class="btnContainer">
+                    <input type="submit" value="Get Code" id="getCodeBtn" />
+                  </div>
+                </form>
+                <% } %>
               </div>
-            </form>
-          </div>
         </div>
       </div>
 </body>

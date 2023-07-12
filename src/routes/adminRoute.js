@@ -18,16 +18,16 @@ ROUTER.post("/admin-dashboard/add-user", (req, res) => {
   ADMIN_ADD_USER_MODEL.find({
     $or: [{ name: post_obj.name }, { t_id: post_obj.t_id }],
   })
-    .then((data) => {
-      if (data == null) {
+    .then(async (data) => {
+      if (data == null || data.length == 0) {
         const addUserToDb = ADMIN_ADD_USER_MODEL(post_obj);
-        addUserToDb.save();
+        await addUserToDb.save();
         res.send(
-          `User added | Go back to admin page: <a href="/admin-dashboard">Admin Dashboard</a>`
+          `<h2 style="color: green;">User added</h2> | Go back to admin page: <a href="/admin-dashboard">Admin Dashboard</a>`
         );
       } else {
         res.send(
-          `User already exists | Go back to admin page: <a href="/admin-dashboard">Admin Dashboard</a>`
+          `<h2 style="color: red;">User already exists</h2> | Go back to admin page: <a href="/admin-dashboard">Admin Dashboard</a>`
         );
       }
     })
