@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/sec_admin.ico" type="image/x-icon">
+    <title>Admin - Login</title>
+    <link rel="stylesheet" href="./admin/adminCss/sec_admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="innerContainer">
+            <div class="headingContainer">
+                <h1>Admin</h1>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="formContainer">
+                <form action="/admin-login/handle-post" method="post">
+                    <div class="inputCont">
+                        <input type="text" name="admin_username" id="admin_username" autocomplete="off"
+                            placeholder="Username" required>
+                    </div>
+                    <div class="inputCont">
+                        <input type="password" name="admin_password" id="admin_password" autocomplete="off"
+                            placeholder="Password" required>
+                    </div>
+                    <div class="inputCont">
+                        <button>Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

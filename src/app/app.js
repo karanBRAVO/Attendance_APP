@@ -9,6 +9,7 @@ const HEAD_LOGIN_ROUTE = require("../routes/headLoginRoute");
 const HEAD_SESSION_ROUTE = require("../routes/headSessionRoute");
 const STD_APP_ROUTE = require("../routes/stdAppRoute");
 const CHECK_ATT = require("../routes/checkAttRoute");
+const SEC_ADMIN_ROUTE = require("../routes/sec_adminRoute");
 
 const APP = EXPRESS();
 const PORT = process.env.PORT || 5678;
@@ -39,6 +40,7 @@ APP.use("/", HEAD_LOGIN_ROUTE);
 APP.use("/", HEAD_SESSION_ROUTE);
 APP.use("/", STD_APP_ROUTE);
 APP.use("/", CHECK_ATT);
+APP.use("/", SEC_ADMIN_ROUTE);
 
 APP.listen(PORT, (err) => {
   if (err) {
@@ -46,6 +48,7 @@ APP.listen(PORT, (err) => {
     console.log(err);
   } else {
     console.log(`[+] App started`);
+    console.log(`Visit the site: http://${IP}:${PORT}/admin-login`);
     console.log(`Visit the site: http://${IP}:${PORT}/head-login`);
     console.log(`Visit the site: http://${IP}:${PORT}/student-app-mark-attendance`);
   }

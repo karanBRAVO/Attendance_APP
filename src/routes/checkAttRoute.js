@@ -5,6 +5,7 @@ const get_converted_date = require("../functions/getConvertedDate");
 
 ROUTER.get("/check-attendance", (req, res) => {
   let query_obj = {};
+  let filter_status = false;
   try {
     let search_values_arr = req.url.split("?")[1].split("&");
 
@@ -27,6 +28,7 @@ ROUTER.get("/check-attendance", (req, res) => {
 
   let filters = {};
   for (let key in query_obj) {
+    filter_status = true;
     filters[key] = key;
   }
   console.log("Filters:", filters);
@@ -34,7 +36,7 @@ ROUTER.get("/check-attendance", (req, res) => {
   STUDENT_MODEL.find(query_obj)
     .then((data) => {
       if (data != null) {
-        res.render("checkAtt", { data: data, filters: filters });
+        res.render("checkAtt", { data: data, filters: filters, filterStatus: filter_status });
       } else {
         res.send("[!] Nothing to show");
       }

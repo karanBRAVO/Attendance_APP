@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerContainer {
+    padding: 20px 30px;
+    margin: 2px;
+    border: 2px solid white;
+    background-color: white;
+    box-shadow: 0 0 8px rgb(86, 85, 85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headingContainer {
+    padding: 7px 0;
+    margin: 7px 0;
+    text-align: center;
+}
+
+.headingContainer h1 {
+    color: #000;
+    padding: 7px 0;
+    margin: 7px 0;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+    text-transform: capitalize;
+    text-decoration: wavy;
+}
+
+.formContainer {
+    padding: 3px;
+    margin: 2px;
+}
+
+.formContainer form {
+    padding: 2px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formContainer form .inputCont {
+    padding: 5px 1px;
+    margin: 5px 1px;
+    width: 100%;
+    height: auto;
+}
+
+.inputCont input {
+    outline: none;
+    border: 2px solid white;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    padding: 5px 7px;
+    margin: 2px 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 1.3em;
+    color: rgb(0, 0, 0);
+}
+
+.inputCont button {
+    width: 100%;
+    padding: 7px 15px;
+    margin: 2px;
+    background: linear-gradient(90deg, rgb(113, 200, 235), rgb(192, 102, 192));
+    cursor: pointer;
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+    border-radius: 12px;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.inputCont button:hover {
+    text-decoration: underline;
+}

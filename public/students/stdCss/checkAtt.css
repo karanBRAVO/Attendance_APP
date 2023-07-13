@@ -215,3 +215,22 @@
     text-transform: none;
     text-decoration: none;
 }
+
+.msgBox {
+    padding: 5px;
+    margin: 4px;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-shadow: 0 0 4px gray;
+    width: fit-content;
+}
+
+.msgBox h4 {
+    padding: 2px;
+    margin: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+}

@@ -32,6 +32,7 @@ ROUTER.post("/head-session-get-code", (req, res) => {
       head_name: teacherName,
       head_id: teacherId,
       code: usr_code,
+      total_students: Number(stdCount),
       student_count: Number(stdCount),
       subject: stdSubject,
     };

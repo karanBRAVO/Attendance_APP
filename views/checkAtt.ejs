@@ -45,68 +45,74 @@
     </div>
 
     <!-- Details -->
-    <div class="detialsHeading">
-        <!-- <h2>Details</h2> -->
-        <div>
-            <h3>Filters</h3>
-            <% for (let key in filters) { %>
-                <p>
-                    <%= filters[key] %>
-                </p>
+    <% if (filterStatus) { %>
+        <div class="detialsHeading">
+            <!-- <h2>Details</h2> -->
+            <div>
+                <h3>Filters</h3>
+                <% for (let key in filters) { %>
+                    <p>
+                        <%= filters[key] %>
+                    </p>
+                    <% } %>
+            </div>
+        </div>
+        <div class="detailsCont">
+            <% for (let i=0; i < data.length; i++) { %>
+                <div class="mainBox">
+                    <div class="topBox">
+                        <div class="box">
+                            <p>name</p>
+                            <span>
+                                <%= data[i].name %>
+                            </span>
+                        </div>
+                        <div class="box">
+                            <p>roll number</p>
+                            <span>
+                                <%= data[i].roll %>
+                            </span>
+                        </div>
+                        <div class="box">
+                            <p>teacher name</p>
+                            <span>
+                                <%= data[i].teacher_name %>
+                            </span>
+                        </div>
+                        <div class="box">
+                            <p>teacher id</p>
+                            <span>
+                                <%= data[i].teacher_id %>
+                            </span>
+                        </div>
+                        <div class="box">
+                            <p>subject</p>
+                            <span>
+                                <%= data[i].subject %>
+                            </span>
+                        </div>
+                        <div class="box">
+                            <p>class</p>
+                            <span>
+                                <%= data[i].class %>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bottomBox">
+                        <div class="dateCont">
+                            <span>
+                                <%= data[i].date %>
+                            </span>
+                        </div>
+                    </div>
+                </div>
                 <% } %>
         </div>
-    </div>
-    <div class="detailsCont">
-        <% for (let i=0; i < data.length; i++) { %>
-            <div class="mainBox">
-                <div class="topBox">
-                    <div class="box">
-                        <p>name</p>
-                        <span>
-                            <%= data[i].name %>
-                        </span>
-                    </div>
-                    <div class="box">
-                        <p>roll number</p>
-                        <span>
-                            <%= data[i].roll %>
-                        </span>
-                    </div>
-                    <div class="box">
-                        <p>teacher name</p>
-                        <span>
-                            <%= data[i].teacher_name %>
-                        </span>
-                    </div>
-                    <div class="box">
-                        <p>teacher id</p>
-                        <span>
-                            <%= data[i].teacher_id %>
-                        </span>
-                    </div>
-                    <div class="box">
-                        <p>subject</p>
-                        <span>
-                            <%= data[i].subject %>
-                        </span>
-                    </div>
-                    <div class="box">
-                        <p>class</p>
-                        <span>
-                            <%= data[i].class %>
-                        </span>
-                    </div>
-                </div>
-                <div class="bottomBox">
-                    <div class="dateCont">
-                        <span>
-                            <%= data[i].date %>
-                        </span>
-                    </div>
-                </div>
+        <% } else { %>
+            <div class="msgBox">
+                <h4>Use filters to get attendance</h4>
             </div>
             <% } %>
-    </div>
 </body>
 
 </html>
